@@ -148,6 +148,7 @@ text-align: center; */
   object-fit: cover;
   border: solid 0.5px #BEBEBE;
   margin: 1vh auto;
+
 }
 
 canvas{
@@ -159,6 +160,7 @@ canvas{
 #main_canvas1 {
   /* mix-blend-mode: difference; これいる？あとで確認 multipfy?*/ 
   /* mix-blend-mode: multiply;  */
+  /* background-image: url(img/body/avoter_sample_resize_touka.png); */
 }
 
 

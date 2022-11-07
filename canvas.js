@@ -37,10 +37,9 @@ const ctx2 = can2.getContext("2d");
 
 
 
-
 //1.洋服に対して色を乗算してカラーリング
 
-ctx1.fillStyle = "rgba(0, 0, 0, 0)"; //最初は透明の背景
+ctx1.fillStyle = "rgba(207, 207, 117,  1)"; //最初は透明の背景 →最初に好きな色プリセット
 ctx1.fillRect(0, 0, 346, 570);
 
 const imageDataPath = "img/clothed_3d/RC-N012.png";
@@ -80,89 +79,29 @@ var color_list= [
 
 // 3-2.カラーをオブジェクトから代入
 
-// for( let A = 0 ; A < color_list.length ; A ++ ){
 
-//   $(`#color_${color_list[A].colornum}`).on("click",function(){
-//     ctx1.globalCompositeOperation = "source-atop";
-//     ctx1.fillStyle = `rgba(${color_list[A].RGB}, 0.5)`; //色味と透過 
-//     ctx1.fillRect( 0 , 0 , 346 , 570); //サイズと場所  
-//   });
+for( let A = 0 ; A < color_list.length ; A ++ ){
+  $(`#color_${color_list[A].colornum}`).on("click",function(){
 
-// }
-
-// ボタンクリックした際に指定色を重ねる
-const colorButton = $("#btn");
-
-colorButton.addEventListener("click", function () {
-    const color = document.$("#addColor");
-    const rgbRed = parseInt(color.value.substring(1, 3), 16); //コード変換
-    const rgbGreen = parseInt(color.value.substring(3, 5), 16);
-    const rgbBlue = parseInt(color.value.substring(5, 7), 16);
-    console.log(`RGB: ${rgbRed},${rgbGreen},${rgbBlue}`);
-
-    // clearRectしないと描画内容が新規更新されない。色がなぜか上塗りされる。１回クリアする
+    // clearRectしないと描画内容が新規更新されない。色が上塗りされる。１回クリアする。
     ctx1.clearRect(0, 0, 346, 570);
 
     //新たに選択したカラーで塗り
-    ctx1.fillStyle = `rgba(${rgbRed},${rgbGreen},${rgbBlue}, 0.7)`;
-    ctx1.fillRect(0, 0, 346, 570);
+    ctx1.fillStyle = `rgba(${color_list[A].RGB}, 1)`; //色味と透過 
+    ctx1.fillRect(0, 0, 346, 570); //サイズと場所  
+
+    // ctx1.globalCompositeOperation = "source-atop"; 塗り方
 
     var base_item = new Image();
     base_item.onload = function () {
-        ctx1.drawImage(base_item,0,0,346,570); //おまえだったのかい！
+      ctx1.drawImage(base_item,0,0,346,570); //おまえだったのかい！
     };
     base_item.src = imageDataPath;
-  }
-);
+
+  });
+};
 
 
-
-
-
-
-
-
-
-
-
-
-// var img = new Image();
-// img.src = "img/body/avoter_sample.png";
-// img.onload = function() {
-//     ctx.drawImage(img, 0,0,346,570); //いったんcanvas内の画像はこのサイズに統一
-//     ctx.globalAlpha = 1.0;
-// }
-
-
-// var img2 = new Image();
-// img2.src = "img/clothed_3d/全身_RC-N014-C01.png";
-// img2.onload = function() {
-//     ctx.drawImage(img2, 0,0,346,570); //いったんcanvas内の画像はこのサイズに統一
-//     // ctx.globalAlpha = 1.0;
-// }
-
-
-// 土台の白地部分
-// ctx.fillStyle = 'rgba(242, 242, 242, 0.5)'; //色味と透過
-// ctx.fillRect( 0 , 0 , 100 , 100);//サイズと場所
-
-
-
-// // //この部分を画像にする
-// var img2 = new Image();
-// img2.src = "img/clothed_3d/RC-N012.png";
-// img2.onload = function() {
-//     ctx.drawImage(img2, 0,0,346,570); //いったんcanvas内の画像はこのサイズに統一
-//     // ctx.globalAlpha = 1.0;
-
-//   //上に重ねるレイヤーの焼き込み方法指定
-//   ctx.globalCompositeOperation = "multiply";//乗算！！
-//   ctx.fillStyle = 'rgb(32, 47, 85)';//色味と透過 乗算指定しているから透過させない
-//   ctx.globalCompositeOperation = "source-atop";//重なったところだけ！！マスキング！
-//   // 上に重ねるレイヤーの色味と透過指定
-//   ctx.fillStyle = 'rgba(32,47, 85, 0.5)'; //色味と透過 
-//   ctx.fillRect( 0 , 0 , 346 , 570); //サイズと場所
-// }
 
 
 
