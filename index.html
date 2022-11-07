@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カスタマイズページ</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Adobe font -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'kgm8lpi',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+
+
+</head>
+
+<body>
+  <header>
+
+    <!-- <div class="header_1">
+      <img src="https://recouture.s3.ap-northeast-1.amazonaws.com/logo.png" alt="header_logo" class="header_logo">
+    </div>
+
+    <div class="header_2">
+      <p>カスタマイズページ</p>
+    </div> -->
+
+    <div class="header_3">
+
+      <div class="header_btn">
+        <div class="save_btn"><a href="#">一時保存</a></div>
+        <div class="cart_btn"><a href="#">カートに追加</a></div>
+      </div>
+
+
+    </div>
+
+
+  </header>
+
+  <main>
+
+    <div class="main_area">
+      <!-- <img src="img/body/avoter_sample.png" alt="" class="main_image"> -->
+      <!-- メインエリアをキャンバスに変えるため一時削除 -->
+
+
+      <div class="main_canvas_wrapper">
+        <canvas id="main_canvas1" width="346px" height="570px">キャンバス1</canvas>
+        <canvas id="main_canvas2" width="346px" height="570px">キャンバス2</canvas>
+      </div>
+
+  
+  
+
+      <img src="img/icons/MagnifyingGlassPlus.svg" alt="zoom" class="main_image_zoom">
+
+      <div class="main_image_arrow">
+        <div> <img src="img/icons/ArrowBendUpLeft.svg" alt="ArrowLeft"> <p>戻る</p></div>
+        <div><img src="img/icons/ArrowBendUpRight.svg" alt="ArrowRight"> <p>進む</p></div>
+      </div>
+
+      <img src="img/icons/face_swap.svg" alt="face_swap" class="main_image_face_swap">
+
+    </div>
+
+
+  </main>
+
+
+
+  <footer>
+
+
+
+
+
+
+    <div class="footer_1">
+      
+      <ul class="footer_1_list">
+
+        <li class="footer_1_item" id="footer_1_color"><img src="img/footer_1_pallet.svg" alt="color"><p>カラー</p></li>
+        <li class="footer_1_item" id="footer_1_collar"><img src="img/clothes/footer_eri.png" alt="collar"><p>襟元</p></li>
+        <li class="footer_1_item" id="footer_1_slleve"><img src="img/clothes/footer_sode.png" alt="sleeve"><p>袖口</p></li>
+        <li class="footer_1_item" id="footer_1_kirikae"><img src="img/clothes/footer_kirikae.png" alt="kirikae"><p>切替位置</p></li>
+        <li class="footer_1_item" id="footer_1_basesize"><img src="img/footer_1_basesize.svg" alt="base_size"><p>ベースサイズ</p></li>
+        <li class="footer_1_item" id="footer_1_avotor"><img src="img/footer_1_avotor.svg" alt="avotor_height"><p>アバター身長</p></li>
+        <li class="footer_1_item" id="footer_1_measure"><img src="img/footer_1_measure.svg" alt="measure"><p>寸法調整</p></li>
+        <li class="footer_1_item" id="footer_1_comment"><img src="img/footer_1_comment.svg" alt="comment"><p>フリーコメント</p></li>
+        <li class="footer_1_item" id="footer_1_save"><img src="img/footer_1_save.svg" alt="save"><p>一時保存</p></li>
+        <li class="footer_1_item" id="footer_1_aruaru"><img src="img/fotter_1_shindan.svg" alt="aruaru"><p>あるある診断へ</p></li>
+        <li class="footer_1_item" id="footer_1_magic"><img src="img/footer_1_starstick.svg" alt="starstick"><p>Recoutureの魔法</p></li>
+     
+      </ul>
+
+      
+      <ul class="footer_1_fixed">
+        <li class="footer_1_item"><img src="img/clothes/K-1.png" alt="home"><p>全体</p></li>
+      </ul>
+
+    </div>
+
+
+
+    <!-- fotter2_A -->
+
+    <div class="slide_footer_A">
+
+
+      <!-- fotter2 -->
+
+      <div class="footer_2_A">
+
+        <ul class="footer_2_A_list">
+
+          <!-- /class名item_thumbnailの構造パターン①（アイコン編） -->
+
+          <div id="color-picker">
+            <label for="head"><h3>カラーリングを選択</h3></label>
+            <input type="color" id="addColor" name="head" value="#dc143c" />
+            <button id="btn">決定</button>
+          </div>
+
+
+
+          <div class="thumbnail_A">
+            <div>
+              <div class="border-radius" id="color_01"></div>
+              <div class="name_A" id="colorname_01"><p>カラー名</p></div>
+            </div>
+          </div>
+
+          <div class="thumbnail_A">
+            <div>
+              <div class="border-radius" id="color_02"></div>
+              <div class="name_A" id="colorname_02"><p>カラー名</p></div>
+            </div>
+          </div>
+
+          <div class="thumbnail_A">
+            <div>
+              <div class="border-radius" id="color_03"></div>
+              <div class="name_A" id="colorname_03"><p>カラー名</p></div>
+            </div>
+          </div>
+
+          <div class="thumbnail_A">
+            <div>
+              <div class="border-radius" id="color_04"></div>
+              <div class="name_A" id="colorname_04"><p>カラー名</p></div>
+            </div>
+          </div>
+
+          <div class="thumbnail_A">
+            <div>
+              <div class="border-radius" id="color_05"></div>
+              <div class="name_A" id="colorname_05"><p>カラー名</p></div>
+            </div>
+          </div>
+
+
+          <div class="thumbnail_A">
+            <div>
+              <div class="border-radius" id="color_06"></div>
+              <div class="name_A" id="colorname_06"><p>カラー名</p></div>
+            </div>
+          </div>
+
+
+        </ul>
+
+
+        <ul class="footer_2_fixed">
+          <li class="footer_2_item"><img src="img/footer_2_none.svg" alt="home"><p>クリア</p></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="slide_footer_B">
+
+
+      <!-- fotter2 -->
+
+      <div class="footer_2">
+
+        <ul class="footer_2_list">
+
+
+          <!-- /class名item_thumbnailの構造パターン①（アイコン編） -->
+          
+          <div class="thumbnail_p1">
+            <div>
+              <div class="name1_p1"><p>U-01</p></div>
+              <div class="image1_p1"><img src="img/clothes/U-1_1.png" alt="" class="thumbnail_p1_icon"></div>
+              <div class="name2_p1"><p>品名品名品名品名</p></div>
+            </div>
+          </div>
+
+          <div class="thumbnail_p1">
+            <div>
+              <div class="name1_p1"><p>U-02</p></div>
+              <div class="image1_p1"><img src="img/clothes/U-1_1.png" alt="" class="thumbnail_p1_icon"></div>
+              <div class="name2_p1"><p>品名品名品名品名</p></div>
+            </div>
+          </div>
+
+          <!-- //class名item_thumbnailの構造パターン①（アイコン編） -->
+
+
+
+          <!-- /class名item_thumbnailの構造パターン②（写真編） -->
+
+
+          <div class="thumbnail_p2">
+            <img src="img/girl_1.jpeg" alt="" class="thumbnail_p2_bg">
+            <div>
+              <div class="name1_p2"><p>U-01</p></div>
+              <div class="name2_p2"><p>品名品名品名品名</p></div>
+            </div>
+          </div>
+
+          <div class="thumbnail_p2">
+            <img src="img/girl_2.jpeg" alt="" class="thumbnail_p2_bg">
+            <div>
+              <div class="name1_p2"><p>U-02</p></div>
+              <div class="name2_p2"><p>品名品名品名品名</p></div>
+            </div>
+          </div>
+
+
+          <!-- //class名item_thumbnailの構造パターン②（写真編） -->
+
+
+
+          <!-- /class名item_thumbnailの構造パターン③（不使用） -->
+
+
+          <li class="thumbnail_p3" id="u-neck">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>U-01</p></div>
+              <div class="image_p3"><img src="img/clothes/U-1_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>クルーネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>U-02</p></div>
+              <div class="image_p3"><img src="img/clothes/U-2_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>ボートネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>U-03</p></div>
+              <div class="image_p3"><img src="img/clothes/U-3_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>ミニ・ボートネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>U-04</p></div>
+              <div class="image_p3"><img src="img/clothes/U-4_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>ラージ・クルーネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>U-05</p></div>
+              <div class="image_p3"><img src="img/clothes/U-5_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>タイト・クルーネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3" id="v-neck">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>V-01</p></div>
+              <div class="image_p3"><img src="img/clothes/V-1_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>Vネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>V-02</p></div>
+              <div class="image_p3"><img src="img/clothes/V-2_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>ワイド・Vネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>V-03</p></div>
+              <div class="image_p3"><img src="img/clothes/V-3_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>深め・Vネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>V-04</p></div>
+              <div class="image_p3"><img src="img/clothes/V-4_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>ラージ・Vネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3" id="sq-neck">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>SQ-01</p></div>
+              <div class="image_p3"><img src="img/clothes/SQ-1_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>スクエアネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>SQ-02</p></div>
+              <div class="image_p3"><img src="img/clothes/SQ-2_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>ワイド・スクエアネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>SQ-03</p></div>
+              <div class="image_p3"><img src="img/clothes/SQ-3_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>深め・スクエアネック</p></div>
+            </div>
+          </li>
+
+          <li class="thumbnail_p3">
+            <div class="thumbnail_p3_wrapper">
+              <div class="name1_p3"><p>SQ-04</p></div>
+              <div class="image_p3"><img src="img/clothes/SQ-4_1.png" alt="favorite"></div>
+              <div class="name2_p3"><p>ラージ・スクエアネック</p></div>
+            </div>
+          </li>
+
+          <!-- //class名footer_1_itemの構造パターン③（不使用） -->
+
+        </ul>
+
+        <ul class="footer_2_fixed">
+          <li class="footer_2_item"><img src="img/footer_2_none.svg" alt="home"><p>クリア</p></li>
+        </ul>
+
+      </div>
+
+      <!-- fotter3 -->
+
+      <div class="footer_3">
+        
+        <ul class="footer_3_list">
+
+          <li class="footer_3_item">
+            <a href="#u-neck">Uネック</a>
+            <!-- <p>Uネック</p> -->
+          </li>
+
+          <li class="footer_3_item">
+            <a href="#v-neck">Vネック</a>
+            <!-- <p>Vネック</p> -->
+          </li>
+
+          <li class="footer_3_item">
+            <a href="#sq-neck">スクエアネック</a>
+            <!-- <p>スクエアネック</p> -->
+          </li>
+
+          <li class="footer_3_item">
+            <a href="#other">その他</a>
+            <!-- <p>その他</p> -->
+          </li>
+
+          <li class="footer_3_item">
+            <a href="#other(dammy)">その他（ダミー）</a>
+            <!-- <p>その他（ダミー）</p> -->
+          </li>
+
+          <li class="footer_3_item">
+            <a href="#other(dammy)">その他（ダミー）</a>
+            <!-- <p>その他（ダミー）</p> -->
+          </li>
+
+        </ul>
+
+        <ul class="footer_3_fixed">
+          <li class="footer_3_item"><img src="img/icons/favorite.svg" alt=""></li>
+        </ul>
+
+      </div>
+    </div>
+
+
+    
+
+
+
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- JQueryが先!! -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- 次にJS! -->
+  <script src="canvas.js"></script>
+  <script src="footer.js"></script>
+  <script src="color.js"></script>
+</body>
+</html>
