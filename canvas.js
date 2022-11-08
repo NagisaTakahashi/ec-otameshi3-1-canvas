@@ -36,10 +36,22 @@ const can2 = $("#main_canvas2")[0];
 const ctx2 = can2.getContext("2d");
 
 
+// 0.カラーの定義
+
+var color_list= [
+  {"colornum":"01","colorname":"NVY","color_code":"3A3A49","RGB":"58,58,73",},
+  {"colornum":"02","colorname":"KKI","color_code":"5D6402","RGB":"93,100,2",},
+  {"colornum":"03","colorname":"LIME","color_code":"CFE375","RGB":"207,207,117",},
+  {"colornum":"04","colorname":"PPL","color_code":"C20F7C","RGB":"194,15,124",},
+  {"colornum":"05","colorname":"RED","color_code":"F32359","RGB":"243,35,89",},
+  {"colornum":"06","colorname":"MNT","color_code":"CBF1EF","RGB":"203,241,239",},
+];
+
+
 
 //1.洋服に対して色を乗算してカラーリング
 
-ctx1.fillStyle = "rgba(207, 207, 117,  1)"; //最初は透明の背景 →最初に好きな色プリセット
+ctx1.fillStyle = `rgba(${color_list[2].RGB}, 1)`; //最初は透明の背景 →最初に好きな色プリセット
 ctx1.fillRect(0, 0, 346, 570);
 
 const imageDataPath = "img/clothed_3d/RC-N012.png";
@@ -66,18 +78,7 @@ ctx2.globalCompositeOperation = "xor";//重なった部分を白く
 
 // 3.ボタンクリックした際に指定色を重ねる
 
-// 3-1.カラーの定義
-
-var color_list= [
-  {"colornum":"01","colorname":"NVY","color_code":"3A3A49","RGB":"58,58,73",},
-  {"colornum":"02","colorname":"KKI","color_code":"5D6402","RGB":"93,100,2",},
-  {"colornum":"03","colorname":"LIME","color_code":"CFE375","RGB":"207,207,117",},
-  {"colornum":"04","colorname":"PPL","color_code":"C20F7C","RGB":"194,15,124",},
-  {"colornum":"05","colorname":"RED","color_code":"F32359","RGB":"243,35,89",},
-  {"colornum":"06","colorname":"MNT","color_code":"CBF1EF","RGB":"203,241,239",},
-];
-
-// 3-2.カラーをオブジェクトから代入
+// 3.カラーをオブジェクトから代入
 
 
 for( let A = 0 ; A < color_list.length ; A ++ ){
